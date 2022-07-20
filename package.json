@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "description": "Webpack plugin that gives you ability to only obfuscate selected part of your code",
   "scripts": {
-    "build": "tsc ./src/pickyObfuscator.ts --outDir ./dist",
+    "build": "tsc ./src/pickyObfuscator.ts --declaration --outDir ./dist",
     "e": "eslint --init",
     "test": "npm run build && webpack --mode=production --node-env=production && node ./test/test.js"
   },
-  "keywords": [],
+  "keywords": [
+    "picky",
+    "obfuscator",
+    "webpack",
+    "plugin",
+    "javascript"
+  ],
   "author": "Terncode",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "javascript-obfuscator": "^4.0.0"
   },
@@ -22,5 +28,18 @@
     "typescript": "^4.7.4",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0"
-  }
+  },
+  "main": "./dist/pickyObfuscator.js",
+  "directories": {
+    "dist": "dist",
+    "src": "src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Terncode/picky-js-obfuscator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Terncode/picky-js-obfuscator/issues"
+  },
+  "homepage": "https://github.com/Terncode/picky-js-obfuscator#readme"
 }
