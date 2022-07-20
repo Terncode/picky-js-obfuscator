@@ -37,7 +37,7 @@ const config = {
                 identifierNamesGenerator: "hexadecimal", // Doesn't make any since here since the Terser will rename most of them
                 log: false,
                 numbersToExpressions: true,
-                renameGlobals: false, // Single function usually don't have globals
+                renameGlobals: false, // Single functions usually don't have globals
                 // selfDefending: true, // Enable only if you know what you are doing
                 simplify: true,
                 splitStrings: true,
