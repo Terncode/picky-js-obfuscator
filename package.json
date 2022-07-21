@@ -1,6 +1,6 @@
 {
   "name": "picky-obfuscator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Webpack plugin that gives you ability to only obfuscate selected part of your code",
   "scripts": {
     "build": "tsc ./src/pickyObfuscator.ts --declaration --outDir ./dist",

@@ -56,9 +56,9 @@ const config = {
 ```
 
 ### Custom obfuscator
-Pass a callback function the the constructor or as a value on complicated object. 
-The function will be called with code compiled snipped and hash if it is included in comment 
-Keep in mind that if you use TerserPlugin your obfuscated might be changed
+Pass a callback function to the constructor or as a value on complicated object. 
+The function will be called with compiled code snipped and hash (if it is included in comment) 
+Keep in mind that if you use TerserPlugin your obfuscated code might be changed
 ```js
 // example
 new PickyObfuscator((code: string, hash: string) => {

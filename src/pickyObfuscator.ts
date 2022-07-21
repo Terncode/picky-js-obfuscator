@@ -71,7 +71,6 @@ export class PickyObfuscator {
                                         const line = lines[i];
                                         
                                         if (this.startComment.test(line)) {
-                                            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                                             hash = line.match(this.startComment)![1] || "default";
                                             if (startLine) {
                                                 throw new Error("Malformed code");
@@ -90,10 +89,11 @@ export class PickyObfuscator {
                                                 code.push(lines[j]);
                                                 lines[j] = ""; // remove existing code
                                             }
-                                            const obsfucated = this.obfuscate(code.join("\n"), hash);
+                                            const obfuscated = this.obfuscate(code.join("\n"), hash);
                                             
-                                            // it should be okay to write in one the will be mapped back to new line when the obsfucation is done  
-                                            lines[startLine] = obsfucated; 
+                                            // it should be okay to write in one line.
+                                            // .join() will get code back together 
+                                            lines[startLine] = obfuscated; 
                                             startLine = undefined;
                                             shouldBreak = false;
                                             hash = "";
