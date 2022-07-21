@@ -14,4 +14,8 @@ console.log = (txt) => {
 };
 
 require("../test_dist/main");
-console.info("PASSED");
+if (expected.length) {
+    console.error("Not all messages has been logged");
+} else {
+    console.info("PASSED");
+}
